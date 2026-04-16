@@ -15,11 +15,10 @@
             color: #e2e8f0;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
 
         .profile-card {
@@ -30,11 +29,6 @@
             width: 340px;
             text-align: center;
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-5px);
         }
 
         .profile-photo {
@@ -55,14 +49,29 @@
         .title {
             font-size: 0.95rem;
             color: #94a3b8;
-            margin: 0 0 24px 0;
+            margin: 0 0 30px 0;
             font-weight: 400;
+        }
+
+        .section-label {
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .links-container:last-child {
+            margin-bottom: 0;
         }
 
         .profile-link {
@@ -87,17 +96,22 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Accent button for the Simulator */
-        .profile-link.featured {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        /* Tool specific styling */
+        .profile-link.tool {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
         }
 
-        .profile-link.featured:hover {
-            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-            transform: scale(1.02);
+        .profile-link.tool:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.08);
+            margin-bottom: 24px;
         }
 
         .icon {
@@ -119,12 +133,8 @@
         <h1>Hamza Shoaib</h1>
         <p class="title">NERA Economic Consulting</p>
         
+        <div class="section-label">Profiles</div>
         <div class="links-container">
-            <a href="https://hamzashoaib.com/local-market-simulator/" class="profile-link featured">
-                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                Local Market Simulator
-            </a>
-
             <a href="https://www.nera.com/experts/s/hamza-shoaib.html?lang=en" target="_blank" class="profile-link">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 NERA Expert Profile
@@ -133,6 +143,16 @@
             <a href="https://www.linkedin.com/in/hamza-shoaib-878052107/" target="_blank" class="profile-link">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 LinkedIn
+            </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-label">Interactive Tools</div>
+        <div class="links-container">
+            <a href="https://hamzashoaib.com/local-market-simulator/" class="profile-link tool">
+                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Local Market Simulator
             </a>
         </div>
     </div>
